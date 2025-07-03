@@ -292,7 +292,7 @@ main {
 /* About Panel Styles */
 .about-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
     gap: 2rem;
 }
 
@@ -306,12 +306,17 @@ main {
 }
 
 .about-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+  width: 100%; /* or max-width: 600px; */
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
+
 
 .about-card:hover {
     transform: translateY(-5px);
