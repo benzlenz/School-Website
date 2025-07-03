@@ -23,7 +23,12 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -158,8 +163,13 @@ main {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Home Panel Styles */
@@ -286,6 +296,15 @@ main {
     gap: 2rem;
 }
 
+.about-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
 .about-card {
     background-color: var(--white);
     padding: 2rem;
@@ -314,6 +333,25 @@ main {
     background: var(--gold);
     bottom: 0;
     left: 0;
+}
+
+.about-card ul {
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.about-card ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.about-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
 }
 
 /* Admission Panel Styles */
@@ -359,7 +397,7 @@ main {
     color: var(--navy-blue);
 }
 
-.admission-card ol, 
+.admission-card ol,
 .admission-card ul {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
@@ -577,7 +615,7 @@ footer {
     left: 0;
 }
 
-.footer-section p, 
+.footer-section p,
 .footer-section a {
     color: var(--light-gray);
     margin-bottom: 0.8rem;
@@ -629,11 +667,11 @@ footer {
         flex-direction: column;
         padding: 1rem;
     }
-    
+
     .logo-container {
         margin-bottom: 1rem;
     }
-    
+
     nav ul.menu {
         gap: 1rem;
     }
@@ -643,7 +681,7 @@ footer {
     .hamburger {
         display: flex;
     }
-    
+
     nav ul.menu {
         position: fixed;
         top: 100px;
@@ -657,35 +695,35 @@ footer {
         padding: 2rem 0;
         transition: var(--transition);
     }
-    
+
     nav ul.menu.active {
         left: 0;
     }
-    
+
     nav ul.menu li {
         margin: 1rem 0;
     }
-    
+
     .logo-container h1 {
         font-size: 1rem;
     }
-    
+
     main {
         margin-top: 80px;
     }
-    
+
     .hero {
         height: 40vh;
     }
-    
+
     .welcome-section h2 {
         font-size: 1.5rem;
     }
-    
+
     .welcome-section p {
         font-size: 1rem;
     }
-    
+
     .messages-section,
     .about-section,
     .admission-section,
@@ -701,29 +739,76 @@ footer {
     .container {
         width: 95%;
     }
-    
+
     .header-container {
         padding: 0.5rem;
     }
-    
+
     .logo {
         height: 50px;
     }
-    
+
     nav ul.menu {
         top: 80px;
         height: calc(100vh - 80px);
     }
-    
+
     main {
         margin-top: 70px;
     }
-    
+
     .hero {
         height: 30vh;
     }
-    
+
     .footer-container {
         grid-template-columns: 1fr;
     }
+}
+.curriculum-accordion {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.accordion-btn {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.accordion-btn:hover,
+.accordion-btn.active {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+.accordion-panel {
+    padding: 0 2rem;
+    background-color: var(--white);
+    display: none;
+    border-top: 1px solid var(--light-gray);
+}
+
+.accordion-panel ul {
+    padding: 1rem 0;
+    margin-left: 1.5rem;
+}
+
+.accordion-panel ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-panel.show {
+    display: block;
 }
