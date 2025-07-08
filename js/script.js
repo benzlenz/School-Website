@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
         mapIframe.setAttribute('loading', 'lazy');
     }
 
-    // Accordion toggle logic
+     // Accordion toggle logic
     document.querySelectorAll('.accordion-btn').forEach(button => {
   button.addEventListener('click', () => {
     const panel = button.nextElementSibling;
@@ -156,5 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
     panel.classList.toggle('show');
   });
 });
+
 
 });
