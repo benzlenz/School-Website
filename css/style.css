@@ -334,12 +334,14 @@ main {
     gap: 2rem;
 }
 
-.about-card img, .card-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  aspect-ratio: 330 / 217; /* optional, modern browsers only */
-  border-radius: 10px;
+.about-card img,
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 330 / 217;
+    /* optional, modern browsers only */
+    border-radius: 10px;
 }
 
 
@@ -809,58 +811,108 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 /* Accordion Styles */
 .curriculum-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .accordion-btn {
-  background-color: var(--white);
-  color: var(--navy-blue);
-  font-size: 1rem;
-  font-weight: 600;
-  border: 1px solid var(--navy-blue);
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: left;
-  cursor: pointer;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+    background-color: var(--white);
+    color: var(--navy-blue);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--navy-blue);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .accordion-btn:hover {
-  background-color: var(--gold);
-  color: var(--white);
+    background-color: var(--gold);
+    color: var(--white);
 }
 
 .accordion-btn.active {
-  background-color: var(--gold);
-  color: var(--white);
+    background-color: var(--gold);
+    color: var(--white);
 }
 
 .accordion-panel {
-  background-color: var(--white);
-  border-left: 4px solid var(--gold);
-  margin-top: -0.8rem;
-  margin-bottom: 1rem;
-  padding: 1rem 1.5rem;
-  display: none;
-  box-shadow: var(--shadow);
-  border-radius: 0 0 8px 8px;
+    background-color: var(--white);
+    border-left: 4px solid var(--gold);
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    display: none;
+    box-shadow: var(--shadow);
+    border-radius: 0 0 8px 8px;
 }
 
 .accordion-panel.show {
-  display: block;
+    display: block;
 }
 
 .accordion-panel ul {
-  padding-left: 1.2rem;
+    padding-left: 1.2rem;
 }
 
 .accordion-panel ul li {
-  list-style-type: disc;
-  margin-bottom: 0.5rem;
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
 }
 
+/* Base styling for icons in the footer */
+.footer-section i {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.footer-section a:hover i,
+.footer-section i:hover {
+    color: #fff176;
+    /* lighter yellow on hover */
+    transform: scale(1.2);
+}
+
+.footer-section p,
+.footer-section a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-gray);
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+/* Hover style for links */
+.footer-section a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+
+.note {
+    background-color: #fff4d1;
+    padding: 1rem;
+    border-left: 5px solid #ffc107;
+    font-style: italic;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.spaced-li {
+    padding-bottom: 23px;
+}
+.admission-info-section {
+  margin-top: 100px; /* adjust this value as needed */
+}
